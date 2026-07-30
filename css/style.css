@@ -562,7 +562,7 @@ h4 { font-size: 1.15rem; }
 /* --- 服务概览 --- */
 .services-overview-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
 }
 
@@ -871,7 +871,7 @@ h4 { font-size: 1.15rem; }
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
   align-items: stretch;
 }
@@ -1420,4 +1420,310 @@ h4 { font-size: 1.15rem; }
 .back-to-top:hover {
   background: var(--color-primary-dark);
   transform: translateY(-2px);
+}
+
+/* --- 博客详情页 --- */
+.blog-post {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 20px 80px;
+}
+
+.blog-post-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.blog-post-category {
+  display: inline-block;
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.blog-post-header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.blog-post-meta {
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.blog-post-content {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--color-text);
+}
+
+.blog-post-content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 48px 0 16px;
+  color: var(--color-primary-dark);
+  border-left: 4px solid var(--color-primary);
+  padding-left: 16px;
+}
+
+.blog-post-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 32px 0 12px;
+  color: var(--color-text);
+}
+
+.blog-post-content p {
+  margin-bottom: 20px;
+}
+
+.blog-post-content ul, .blog-post-content ol {
+  margin-bottom: 20px;
+  padding-left: 24px;
+}
+
+.blog-post-content li {
+  margin-bottom: 8px;
+}
+
+.blog-post-content blockquote {
+  border-left: 4px solid var(--color-accent);
+  background: var(--color-primary-light);
+  padding: 16px 24px;
+  margin: 24px 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-style: italic;
+  color: var(--color-primary-dark);
+}
+
+.blog-post-content code {
+  background: var(--color-bg-alt);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: 0.9em;
+  color: var(--color-primary-dark);
+}
+
+.blog-post-content strong {
+  color: var(--color-primary-dark);
+}
+
+.blog-post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 40px;
+  font-size: 0.95rem;
+}
+
+.blog-post-back:hover {
+  color: var(--color-primary-dark);
+}
+
+.blog-post-related {
+  margin-top: 64px;
+  padding-top: 40px;
+  border-top: 1px solid var(--color-border);
+}
+
+.blog-post-related h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 24px;
+  color: var(--color-text-secondary);
+}
+
+.blog-post-related ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.blog-post-related li a {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--color-bg-alt);
+  border-radius: 20px;
+  color: var(--color-text);
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.blog-post-related li a:hover {
+  background: var(--color-primary-light);
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 768px) {
+  .blog-post-header h1 {
+    font-size: 1.5rem;
+  }
+  .blog-post-content h2 {
+    font-size: 1.25rem;
+  }
+  .blog-post {
+    padding: 40px 16px 60px;
+  }
+}
+
+
+/* --- AI友好化新增页面 --- */
+.content-panel {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 32px;
+}
+
+.content-panel h2 {
+  margin-bottom: 16px;
+}
+
+.content-panel p {
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.info-card,
+.faq-item {
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+}
+
+.info-card h3,
+.faq-item h3 {
+  margin-bottom: 16px;
+}
+
+.info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.info-table th,
+.info-table td {
+  border-bottom: 1px solid var(--color-border);
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.info-table th {
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  background: var(--color-primary-light);
+  width: 28%;
+}
+
+.info-table tr:last-child th,
+.info-table tr:last-child td {
+  border-bottom: none;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-param-table th {
+  width: auto;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.faq-item p {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  .info-grid,
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+  .content-panel {
+    padding: 28px 22px;
+  }
+}
+
+
+/* --- FAQ与行业资讯扩展 --- */
+.faq-group {
+  margin-bottom: 40px;
+}
+
+.faq-group h2 {
+  font-size: 1.35rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary-light);
+}
+
+.faq-group .faq-item {
+  margin-bottom: 16px;
+}
+
+.content-channel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.channel-card {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+}
+
+.channel-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+}
+
+.channel-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .content-channel-grid {
+    grid-template-columns: 1fr;
+  }
 }
