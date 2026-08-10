@@ -1,0 +1,4 @@
+﻿User-agent: *
+Allow: /
+
+Sitemap: https://mianhua611.github.io/yuntuGEO/sitemap.xml
