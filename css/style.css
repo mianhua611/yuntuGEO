@@ -719,6 +719,17 @@ h4 { font-size: 1.15rem; }
   margin-bottom: 20px;
 }
 
+/* 线性 SVG 图标统一着色 */
+.value-card .icon svg,
+.service-overview-card .icon svg,
+.case-card-image svg,
+.hero-card-header .icon svg,
+.contact-item .icon svg,
+.placeholder-visual .big-icon svg,
+.form-success .icon svg {
+  color: var(--color-primary);
+}
+
 .value-card h3 {
   margin-bottom: 10px;
 }
