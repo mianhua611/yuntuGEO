@@ -1417,6 +1417,42 @@ h4 { font-size: 1.15rem; }
   margin-top: 8px;
 }
 
+/* --- 隐私公示（留资表单合规声明） --- */
+.form-privacy {
+  margin-top: 16px;
+  padding: 14px 16px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.form-privacy strong {
+  display: block;
+  color: var(--color-primary-dark);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-privacy b {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+.form-privacy a {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.form-privacy a:hover {
+  color: var(--color-primary);
+}
+
 .form-success {
   display: none;
   text-align: center;
